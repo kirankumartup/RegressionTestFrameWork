@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ 
+<suite name="smoke-test-suite" parallel="tests" thread-count="1">
+<parameter name="ReportLocation" value="C:\Users\Racer\Desktop\Report"></parameter>
+<parameter name="remoteURL" value="http://mayur_kagrana:a0f8f310-237a-4152-a6b3-757ffea92d52@ondemand.saucelabs.com:80/wd/hub"></parameter>
+<parameter name="baseURL" value="http://opensource.demo.orangehrm.com/"></parameter>
+<parameter name="OS" value="WIN8_1"></parameter>
+<parameter name="browser" value="FIREFOX"></parameter>
+<parameter name="version" value="34"></parameter>
+<parameter name="internal" value="true"></parameter>
+<test name="SingleTest" parallel="classes" thread-count="3">
+    <classes>
+  <class name="com.company.test.LoginTest"/>
+    <class name="com.company.test.LoginTest1"/>
+      <class name="com.company.test.LoginTest2" />
+    </classes>
+</test>
+</suite>
