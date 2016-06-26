@@ -3,19 +3,13 @@ package com.helper.pages;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 
 import com.helper.DTO.TestCase;
 import com.helper.DTO.WebDriverConfig;
@@ -34,9 +28,8 @@ public class BasePage {
 	 * This gets invoked even before suite starts.
 	 * @param ReportLocation
 	 */
-	@Parameters({"ReportLocation"})
 	@BeforeSuite
-	public void beforeSuite(@Optional String ReportLocation){
+	public void beforeSuite(){
 		log = new Log();
 	}
 	@BeforeMethod
